@@ -1,4 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Ikirachiku
+
+Ikirachiku is a modern anime streaming web application built with **Next.js 16**, **TypeScript**, and **TailwindCSS**.  
+The platform provides trending anime, latest episode updates, anime schedules, and a cinematic UI experience similar to modern streaming platforms.
+
+---
+
+## 🚀 Features
+
+- 🔥 Trending Anime Hero Slider
+- 📅 Anime Schedule
+- 📦 Batch Download List
+- 🔍 Anime Search
+- 🎥 Watch Episode Page
+- 🎨 Cinematic UI Design
+- 📱 Fully Responsive Layout
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js 16**
+- **React**
+- **TypeScript**
+- **TailwindCSS**
+- **Lucide Icons**
+
+---
 
 ## Getting Started
 
@@ -30,7 +57,5 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
