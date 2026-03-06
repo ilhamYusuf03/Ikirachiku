@@ -6,7 +6,7 @@ export function Footer() {
             <AdScript />
             <footer className="bg-slate-900 border-t border-white/10 py-6 mt-auto">
                 <div className="container mx-auto px-4 text-center text-gray-400 text-sm">
-                    <p>&copy; 2026 AnimeKompi. All rights reserved.</p>
+                    <p>&copy; 2026 Ikirachiku. All rights reserved.</p>
                 </div>
             </footer>
 

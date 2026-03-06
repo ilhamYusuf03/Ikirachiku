@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -10,91 +10,102 @@ const inter = Inter({
   display: "swap",
 });
 
+const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-heading",
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://animekompi.fun'),
+  metadataBase: new URL("https://animestream.vercel.app"),
+
   title: {
-    default: 'AnimeKompi - Nonton Anime Subtitle Indonesia Gratis',
-    template: '%s | AnimeKompi'
+    default: "AnimeStream - Streaming Anime Subtitle Indonesia",
+    template: "%s | AnimeStream",
   },
-  description: 'Nonton anime subtitle Indonesia terbaru dan terlengkap secara gratis. Streaming anime ongoing, completed, dan batch download dengan kualitas HD.',
+
+  description:
+    "Platform streaming anime subtitle Indonesia dengan update episode terbaru setiap hari. Nonton anime ongoing, completed, dan episode terbaru dalam kualitas HD.",
+
   keywords: [
-    'anime',
-    'nonton anime',
-    'anime subtitle indonesia',
-    'anime sub indo',
-    'streaming anime',
-    'download anime',
-    'anime gratis',
-    'anime terbaru',
-    'anime ongoing',
-    'anime completed',
-    'batch anime',
-    'animekompi'
+    "anime streaming",
+    "anime subtitle indonesia",
+    "nonton anime",
+    "anime terbaru",
+    "anime ongoing",
+    "anime completed",
+    "anime hd",
   ],
-  authors: [{ name: 'AnimeKompi' }],
-  creator: 'AnimeKompi',
-  publisher: 'AnimeKompi',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+
+  authors: [{ name: "Ilham Yusuf" }],
+  creator: "Ilham Yusuf",
+  publisher: "AnimeStream",
+
   openGraph: {
-    type: 'website',
-    locale: 'id_ID',
-    url: 'https://animekompi.fun',
-    siteName: 'AnimeKompi',
-    title: 'AnimeKompi - Nonton Anime Subtitle Indonesia Gratis',
-    description: 'Nonton anime subtitle Indonesia terbaru dan terlengkap secara gratis. Streaming anime ongoing, completed, dan batch download dengan kualitas HD.',
+    type: "website",
+    locale: "id_ID",
+    url: "https://animestream.vercel.app",
+    siteName: "AnimeStream",
+    title: "AnimeStream - Streaming Anime Subtitle Indonesia",
+    description:
+      "Streaming anime subtitle Indonesia dengan update episode terbaru setiap hari.",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'AnimeKompi - Nonton Anime Sub Indo',
-      }
+        alt: "AnimeStream - Anime Streaming Platform",
+      },
     ],
   },
+
   twitter: {
-    card: 'summary_large_image',
-    title: 'AnimeKompi - Nonton Anime Subtitle Indonesia Gratis',
-    description: 'Nonton anime subtitle Indonesia terbaru dan terlengkap secara gratis.',
-    images: ['/og-image.jpg'],
+    card: "summary_large_image",
+    title: "AnimeStream - Streaming Anime Subtitle Indonesia",
+    description:
+      "Streaming anime subtitle Indonesia dengan update episode terbaru setiap hari.",
+    images: ["/og-image.jpg"],
   },
+
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
-  verification: {
-    google: 'dIdb0mScWZINp_KIjq2Pzaav4il0UUux5qaL1jpMCWs',
-    yandex: 'f7e08788b0922eec',
+
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="id" className="dark" suppressHydrationWarning>
+    <html
+      lang="id"
+      className={`${inter.variable} ${bebas.variable} dark`}
+      suppressHydrationWarning
+    >
       <head>
-        <link rel="canonical" href="https://animekompi.fun" />
-        <meta name="theme-color" content="#0f172a" />
+        <link rel="canonical" href="https://animestream.vercel.app" />
+        <meta name="theme-color" content="#020617" />
       </head>
-      <body className={`${inter.variable} font-sans min-h-screen flex flex-col bg-slate-950 text-white antialiased`} suppressHydrationWarning>
+
+      <body className="font-sans min-h-screen flex flex-col bg-slate-950 text-white antialiased">
+
+        {/* Navbar */}
         <Navbar />
+
+        {/* Main Content */}
         <main className="flex-grow">
           {children}
         </main>
+
+        {/* Footer */}
         <Footer />
+
       </body>
     </html>
   );

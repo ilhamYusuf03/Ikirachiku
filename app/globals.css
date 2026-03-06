@@ -123,3 +123,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+.anime-title{
+-webkit-text-stroke:1.2px silver;
+text-shadow:0 5px 20px rgba(30, 29, 29, 0.7);
+transition:all .3s ease;
+}
+
+.anime-title:hover{
+transform:scale(1.03);
+}
